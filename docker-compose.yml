@@ -1,0 +1,19 @@
+services:
+  apigateway:
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    command: ./apiGateway
+  censure:
+    build: . 
+    restart: always
+    command: ./censure
+  comments:
+    build: . 
+    restart: always
+    command: ./comments
+  news:
+    build: . 
+    restart: always
+    command: ./news
